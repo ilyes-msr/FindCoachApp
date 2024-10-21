@@ -32,7 +32,6 @@ export default {
         return;
       }      
       const newRequest = {
-        id: new Date().toISOString(),
         email: this.email,
         message: this.message,
         coachId: this.$route.params.id

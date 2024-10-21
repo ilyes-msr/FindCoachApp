@@ -3,7 +3,10 @@ export default {
     const activeCoach = rootGetters.userId;
     return state.requests.filter(req => req.coachId === activeCoach)
   },
+  getRequests(state) {
+    return state.requests
+  },
   requestsCount(_, getters) {
-    return getters.requests.length
-  }
+    return getters.getRequests.length
+  },
 }

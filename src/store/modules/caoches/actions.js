@@ -18,8 +18,9 @@ export default {
       // ..error
     }
 
-    // const responseData = await response.json();
-
+    const responseData = await response.json();
+    console.log(responseData);
+    
     context.commit('registerCoach', {
       ...newCoach,
       id: userId

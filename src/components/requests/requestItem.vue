@@ -2,7 +2,6 @@
   <base-card>
     <li>
       <a :href="emailLink"> {{ email }} </a>
-
       <p>{{ message }}</p>
     </li>
   </base-card>
@@ -16,7 +15,6 @@ computed: {
     return 'mailto:' + this.email 
   }
 }
-
 }
 </script>
 
