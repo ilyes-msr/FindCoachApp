@@ -22,7 +22,10 @@ export default {
     const activeCoachId = context.rootGetters.userId;
     // console.log(activeCoachId)
     // console.log('LOAD REQUESTS ACTION')
-    const response = await fetch(`https://findacoachapp-e49ab-default-rtdb.firebaseio.com/requests/${activeCoachId}.json`);
+
+    const token = context.rootGetters.token;
+
+    const response = await fetch(`https://findacoachapp-e49ab-default-rtdb.firebaseio.com/requests/${activeCoachId}.json?auth=${token}`);
 
     const responseData = await response.json();
     if(!response.ok) {
